@@ -70,27 +70,23 @@
 ========================================= */
 
 .developer-avatar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
-    width: 90px;
-    height: 90px;
+    width: 80px;
 
-    margin-bottom: 1.5rem;
+    height: 80px;
 
     border-radius: 50%;
 
-    background: linear-gradient(135deg,
-            var(--color-secondary),
-            var(--color-accent));
+    object-fit: cover;
 
-    color: white;
+    margin-inline: auto;
 
-    font-size: 1.8rem;
-    font-weight: 700;
+    display: block;
 
-    box-shadow: var(--shadow-md);
+    margin-bottom: 1rem;
+
+    border: 3px solid var(--primary-color);
+
 }
 
 /* =========================================

@@ -52,7 +52,7 @@
     <!-- Header -->
     <!-- ========================================= -->
 
-    <header class="header">
+    <header class="header" id="header">
 
         <div class="container">
 
@@ -60,7 +60,7 @@
 
                 <!-- Logo -->
 
-                <a href="#" class="logo">
+                <a href="#hero" class="logo">
 
                     <div class="logo-icon">
 
@@ -86,37 +86,37 @@
                 <ul class="nav-links">
 
                     <li>
-                        <a href="#hero">
+                        <a href="#hero" class="nav-link active">
                             Home
                         </a>
                     </li>
 
                     <li>
-                        <a href="#workflow">
+                        <a href="#workflow" class="nav-link">
                             Workflow
                         </a>
                     </li>
 
                     <li>
-                        <a href="#labs">
+                        <a href="#labs" class="nav-link">
                             Labs
                         </a>
                     </li>
 
                     <li>
-                        <a href="#dashboard">
+                        <a href="#dashboard" class="nav-link">
                             Dashboard
                         </a>
                     </li>
 
                     <li>
-                        <a href="#developers">
+                        <a href="#developers" class="nav-link">
                             Developers
                         </a>
                     </li>
 
                     <li>
-                        <a href="#faq">
+                        <a href="#faq" class="nav-link">
                             FAQ
                         </a>
                     </li>
@@ -130,7 +130,7 @@
 
                     <a href="#" class="btn btn-secondary">
 
-                        <i data-lucide="github"></i>
+                        <i data-lucide="git-branch"></i>
 
                         <span>
 
@@ -311,66 +311,19 @@
 
                                 <div class="repo-name">
 
-                                    <i data-lucide="github"></i>
+                                    <i data-lucide="git-branch"></i>
 
-                                    <span>
-
-                                        collab-lab
-
+                                    <span data-repository-name>
+                                        Loading...
                                     </span>
 
                                 </div>
 
 
 
-                                <div class="branch-list">
+                                <div class="branch-list" data-branch-list>
 
-                                    <div class="branch">
-
-                                        <i data-lucide="git-branch"></i>
-
-                                        <span>main</span>
-
-                                    </div>
-
-
-                                    <div class="branch">
-
-                                        <i data-lucide="git-branch"></i>
-
-                                        <span>
-
-                                            feature/task-manager
-
-                                        </span>
-
-                                    </div>
-
-
-                                    <div class="branch">
-
-                                        <i data-lucide="git-branch"></i>
-
-                                        <span>
-
-                                            feature/calculator
-
-                                        </span>
-
-                                    </div>
-
-
-                                    <div class="branch">
-
-                                        <i data-lucide="git-branch"></i>
-
-                                        <span>
-
-                                            feature/quiz
-
-                                        </span>
-
-                                    </div>
+                                    Loading branches...
 
                                 </div>
 
@@ -440,60 +393,9 @@
 
                                     </h4>
 
+                                    <div data-latest-activity>
 
-                                    <div class="activity">
-
-                                        <strong>
-
-                                            Tobi
-
-                                        </strong>
-
-                                        pushed
-
-                                        <code>
-
-                                    feat: create hero section
-
-                                </code>
-
-                                    </div>
-
-
-                                    <div class="activity">
-
-                                        <strong>
-
-                                            David
-
-                                        </strong>
-
-                                        opened Pull Request
-
-                                        <code>
-
-                                    #18
-
-                                </code>
-
-                                    </div>
-
-
-                                    <div class="activity">
-
-                                        <strong>
-
-                                            Sarah
-
-                                        </strong>
-
-                                        updated
-
-                                        <code>
-
-                                    Quiz UI
-
-                                </code>
+                                        Loading activity...
 
                                     </div>
 
@@ -567,10 +469,8 @@
 
                         <div class="stat-content">
 
-                            <h3 class="counter" data-target="3">
-
+                            <h3 class="counter" data-counter="contributors">
                                 0
-
                             </h3>
 
                             <h4>
@@ -603,16 +503,13 @@
 
                         <div class="stat-content">
 
-                            <h3 class="counter" data-target="3">
-
+                            <h3 class="counter" data-counter="labs">
                                 0
-
                             </h3>
 
+
                             <h4>
-
                                 Learning Labs
-
                             </h4>
 
                             <p>
@@ -640,10 +537,8 @@
 
                         <div class="stat-content">
 
-                            <h3 class="counter" data-target="12">
-
+                            <h3 class="counter" data-counter="pullRequests">
                                 0
-
                             </h3>
 
                             <h4>
@@ -677,10 +572,8 @@
 
                         <div class="stat-content">
 
-                            <h3 class="counter" data-target="48">
-
+                            <h3 class="counter" data-counter="commits">
                                 0
-
                             </h3>
 
                             <h4>
@@ -713,7 +606,7 @@
 
                         <div class="repo-title">
 
-                            <i data-lucide="github"></i>
+                            <i data-lucide="folder-git-2"></i>
 
                             <span>
 
@@ -735,10 +628,8 @@
 
                             <div>
 
-                                <strong>
-
-                                    4
-
+                                <strong data-summary="branches">
+                                    0
                                 </strong>
 
                                 <span>
@@ -759,10 +650,8 @@
 
                             <div>
 
-                                <strong>
-
+                                <strong data-summary="contributors">
                                     3
-
                                 </strong>
 
                                 <span>
@@ -783,10 +672,8 @@
 
                             <div>
 
-                                <strong>
-
-                                    2
-
+                                <strong data-summary="pullRequests">
+                                    0
                                 </strong>
 
                                 <span>
@@ -807,9 +694,9 @@
 
                             <div>
 
-                                <strong>
+                                <strong data-summary="merged">
 
-                                    15
+                                    0
 
                                 </strong>
 
@@ -1821,147 +1708,8 @@
 
                         </h3>
 
-                        <div class="board-columns">
-
-
-                            <!-- To Do -->
-
-                            <div class="board-column">
-
-                                <div class="column-header">
-
-                                    <i data-lucide="clipboard-list"></i>
-
-                                    <h4>
-
-                                        To Do
-
-                                    </h4>
-
-                                </div>
-
-                                <div class="board-card">
-
-                                    Create Footer
-
-                                </div>
-
-                                <div class="board-card">
-
-                                    Responsive Testing
-
-                                </div>
-
-                                <div class="board-card">
-
-                                    Accessibility Check
-
-                                </div>
-
-                            </div>
-
-
-
-                            <!-- In Progress -->
-
-                            <div class="board-column">
-
-                                <div class="column-header">
-
-                                    <i data-lucide="hammer"></i>
-
-                                    <h4>
-
-                                        In Progress
-
-                                    </h4>
-
-                                </div>
-
-                                <div class="board-card active">
-
-                                    Task Manager UI
-
-                                </div>
-
-                                <div class="board-card active">
-
-                                    Calculator Logic
-
-                                </div>
-
-                            </div>
-
-
-
-                            <!-- In Review -->
-
-                            <div class="board-column">
-
-                                <div class="column-header">
-
-                                    <i data-lucide="git-pull-request"></i>
-
-                                    <h4>
-
-                                        In Review
-
-                                    </h4>
-
-                                </div>
-
-                                <div class="board-card review">
-
-                                    PR #18
-
-                                </div>
-
-                                <div class="board-card review">
-
-                                    PR #20
-
-                                </div>
-
-                            </div>
-
-
-
-                            <!-- Completed -->
-
-                            <div class="board-column">
-
-                                <div class="column-header">
-
-                                    <i data-lucide="badge-check"></i>
-
-                                    <h4>
-
-                                        Completed
-
-                                    </h4>
-
-                                </div>
-
-                                <div class="board-card complete">
-
-                                    Hero Section
-
-                                </div>
-
-                                <div class="board-card complete">
-
-                                    Statistics
-
-                                </div>
-
-                                <div class="board-card complete">
-
-                                    Workflow
-
-                                </div>
-
-                            </div>
-
+                        <div class="board-columns" data-project-board>
+                            Loading project board...
                         </div>
 
                     </div>
@@ -1980,146 +1728,9 @@
 
                         </h3>
 
-                        <div class="activity-list">
+                        <div class="activity-list" data-dashboard-activity>
 
-
-                            <div class="activity-item">
-
-                                <div class="activity-icon">
-
-                                    <i data-lucide="git-commit-horizontal"></i>
-
-                                </div>
-
-                                <div>
-
-                                    <strong>
-
-                                        Developer 01
-
-                                    </strong>
-
-                                    <p>
-
-                                        feat: create task form
-
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-
-
-                            <div class="activity-item">
-
-                                <div class="activity-icon">
-
-                                    <i data-lucide="git-pull-request-create"></i>
-
-                                </div>
-
-                                <div>
-
-                                    <strong>
-
-                                        Developer 02
-
-                                    </strong>
-
-                                    <p>
-
-                                        Opened Pull Request #18
-
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-
-
-                            <div class="activity-item">
-
-                                <div class="activity-icon">
-
-                                    <i data-lucide="message-circle-more"></i>
-
-                                </div>
-
-                                <div>
-
-                                    <strong>
-
-                                        Maintainer
-
-                                    </strong>
-
-                                    <p>
-
-                                        Requested code changes
-
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-
-
-                            <div class="activity-item">
-
-                                <div class="activity-icon">
-
-                                    <i data-lucide="git-merge"></i>
-
-                                </div>
-
-                                <div>
-
-                                    <strong>
-
-                                        Maintainer
-
-                                    </strong>
-
-                                    <p>
-
-                                        Merged PR #17 into main
-
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-
-
-                            <div class="activity-item">
-
-                                <div class="activity-icon">
-
-                                    <i data-lucide="rocket"></i>
-
-                                </div>
-
-                                <div>
-
-                                    <strong>
-
-                                        Developer 03
-
-                                    </strong>
-
-                                    <p>
-
-                                        Started Quiz Application
-
-                                    </p>
-
-                                </div>
-
-                            </div>
+                            Loading activity...
 
                         </div>
 
@@ -2169,210 +1780,9 @@
 
 
 
-                <div class="developers-grid">
+                <div class="developers-grid" data-developers>
 
-
-                    <!-- Developer 01 -->
-
-                    <article class="developer-card">
-
-                        <div class="developer-avatar">
-
-                            D1
-
-                        </div>
-
-                        <h3>
-
-                            Developer 01
-
-                        </h3>
-
-                        <p class="developer-role">
-
-                            Frontend Developer
-
-                        </p>
-
-                        <ul class="developer-info">
-
-                            <li>
-
-                                <strong>Lab:</strong>
-
-                                Task Manager
-
-                            </li>
-
-                            <li>
-
-                                <strong>Branch:</strong>
-
-                                feature/task-manager
-
-                            </li>
-
-                            <li>
-
-                                <strong>Commits:</strong>
-
-                                8
-
-                            </li>
-
-                            <li>
-
-                                <strong>Pull Requests:</strong>
-
-                                2
-
-                            </li>
-
-                        </ul>
-
-                        <a href="#" class="btn btn-outline">
-
-                            View Profile
-
-                        </a>
-
-                    </article>
-
-
-
-                    <!-- Developer 02 -->
-
-                    <article class="developer-card">
-
-                        <div class="developer-avatar">
-
-                            D2
-
-                        </div>
-
-                        <h3>
-
-                            Developer 02
-
-                        </h3>
-
-                        <p class="developer-role">
-
-                            Frontend Developer
-
-                        </p>
-
-                        <ul class="developer-info">
-
-                            <li>
-
-                                <strong>Lab:</strong>
-
-                                Calculator
-
-                            </li>
-
-                            <li>
-
-                                <strong>Branch:</strong>
-
-                                feature/calculator
-
-                            </li>
-
-                            <li>
-
-                                <strong>Commits:</strong>
-
-                                6
-
-                            </li>
-
-                            <li>
-
-                                <strong>Pull Requests:</strong>
-
-                                2
-
-                            </li>
-
-                        </ul>
-
-                        <a href="#" class="btn btn-outline">
-
-                            View Profile
-
-                        </a>
-
-                    </article>
-
-
-
-                    <!-- Developer 03 -->
-
-                    <article class="developer-card">
-
-                        <div class="developer-avatar">
-
-                            D3
-
-                        </div>
-
-                        <h3>
-
-                            Developer 03
-
-                        </h3>
-
-                        <p class="developer-role">
-
-                            Frontend Developer
-
-                        </p>
-
-                        <ul class="developer-info">
-
-                            <li>
-
-                                <strong>Lab:</strong>
-
-                                Quiz Application
-
-                            </li>
-
-                            <li>
-
-                                <strong>Branch:</strong>
-
-                                feature/quiz
-
-                            </li>
-
-                            <li>
-
-                                <strong>Commits:</strong>
-
-                                4
-
-                            </li>
-
-                            <li>
-
-                                <strong>Pull Requests:</strong>
-
-                                1
-
-                            </li>
-
-                        </ul>
-
-                        <a href="#" class="btn btn-outline">
-
-                            View Profile
-
-                        </a>
-
-                    </article>
+                    Loading developers...
 
                 </div>
 
@@ -2794,9 +2204,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <script>
-
         lucide.createIcons();
-
     </script>
 
 
@@ -2805,7 +2213,7 @@
     <!-- JavaScript -->
     <!-- ========================================= -->
 
-    <script src="./js/main.js"></script>
+    <script type="module" src="./js/main.js"></script>
 
 </body>
 
