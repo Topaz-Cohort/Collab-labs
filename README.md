@@ -44,9 +44,9 @@ collab-lab/
 
 | Lab    | Project      | Assigned Developer |
 | ------ | ------------ | ------------------ |
-| Lab 01 | Task Manager | Developer One      |
-| Lab 02 | Calculator   | Developer Two      |
-| Lab 03 | Quiz App     | Developer Three    |
+| Lab 01 | Task Manager | Uche      |
+| Lab 02 | Calculator   | Nadhrah   |
+| Lab 03 | Quiz App     | Dami    |
 
 ---
 

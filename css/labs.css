@@ -1,0 +1,364 @@
+/* =========================================
+   LABS SECTION
+========================================= */
+
+.labs {
+    background: var(--color-surface);
+}
+
+.labs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: var(--space-12);
+}
+
+/* =========================================
+   CARD
+========================================= */
+
+.lab-card {
+    display: flex;
+    flex-direction: column;
+
+    background: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: 1.5rem;
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow-sm);
+
+    transition: all .3s ease;
+}
+
+/* =========================================
+   TOP ACCENT BAR
+========================================= */
+
+.lab-card {
+    position: relative;
+}
+
+.lab-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 5px;
+
+    background: linear-gradient(90deg,
+            var(--color-secondary),
+            var(--color-accent));
+
+    z-index: 5;
+}
+
+.lab-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.lab-header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1.25rem 2rem;
+
+    background: linear-gradient(135deg,
+            rgba(3, 181, 170, .08),
+            rgba(255, 133, 82, .04));
+
+    border-bottom: 1px solid var(--color-border);
+
+}
+
+.lab-number {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+/* =========================================
+   STATUS CHIP
+========================================= */
+.status-chip {
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: .55rem 1rem;
+
+    border-radius: 999px;
+
+    font-size: .8rem;
+    font-weight: 700;
+
+}
+
+.status-chip.progress {
+
+    background: rgba(3, 181, 170, .12);
+
+    color: var(--color-secondary);
+
+}
+
+.status-chip.review {
+
+    background: rgba(255, 133, 82, .12);
+
+    color: var(--color-accent);
+
+}
+
+.status-chip.pending {
+
+    background: #eef4f5;
+
+    color: var(--color-primary);
+
+}
+
+/* =========================================
+   TITLE
+========================================= */
+
+.lab-card h3 {
+    margin: 1.75rem 2rem .75rem;
+
+    color: var(--color-primary);
+
+    font-size: 1.55rem;
+}
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.lab-card>p {
+    margin: 0 2rem 1.75rem;
+
+    color: var(--color-text-light);
+
+    line-height: 1.8;
+}
+
+/* =========================================
+   META
+========================================= */
+.lab-meta {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 1rem;
+
+    margin: 0 2rem 2rem;
+
+}
+
+.lab-meta div {
+
+    padding: 1rem;
+
+    background: #f8fbfb;
+
+    border: 1px solid var(--color-border);
+
+    border-radius: 14px;
+
+}
+
+.lab-meta strong {
+
+    display: block;
+
+    margin-bottom: .4rem;
+
+    font-size: .75rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: .08em;
+
+    color: var(--color-text-light);
+
+}
+
+.lab-meta span {
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+    color: var(--color-primary);
+
+}
+
+/* =========================================
+   TECHNOLOGIES
+========================================= */
+.lab-technologies {
+
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: .75rem;
+
+    margin: 0 2rem 2rem;
+
+}
+
+.lab-technologies span {
+
+    padding: .65rem 1rem;
+
+    background: #edf8f8;
+
+    border: 1px solid rgba(3, 181, 170, .15);
+
+    border-radius: 999px;
+
+    font-size: .85rem;
+
+    font-weight: 600;
+
+    color: var(--color-primary);
+
+    transition: .25s;
+
+}
+
+.lab-technologies span:hover {
+
+    background: var(--color-secondary);
+
+    color: white;
+
+    transform: translateY(-2px);
+
+}
+
+/* =========================================
+   OWNER
+========================================= */
+.lab-owner {
+
+    display: flex;
+    align-items: center;
+
+    gap: .9rem;
+
+    margin: 0 2rem 2rem;
+
+    padding: 1rem;
+
+    background: #f8fbfb;
+
+    border-radius: 14px;
+
+    border: 1px solid var(--color-border);
+
+}
+
+.lab-owner svg {
+
+    color: var(--color-secondary);
+
+    width: 22px;
+
+    height: 22px;
+
+}
+
+.lab-owner span {
+
+    color: var(--color-primary);
+
+    font-weight: 500;
+
+}
+
+/* =========================================
+   OUTCOMES
+========================================= */
+
+.lab-outcomes {
+
+    margin: 0 2rem;
+
+}
+
+.lab-outcomes h4 {
+
+    margin-bottom: 1rem;
+
+    color: var(--color-primary);
+
+}
+
+.lab-outcomes ul {
+
+    display: grid;
+
+    gap: .9rem;
+
+}
+
+.lab-outcomes li {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: .75rem;
+
+    color: var(--color-text-light);
+
+}
+
+.lab-outcomes li::before {
+
+    content: "";
+
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    background: var(--color-accent);
+
+    flex-shrink: 0;
+
+}
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.lab-card .btn {
+
+    margin: 2rem;
+
+    /* margin-top: ; */
+
+    width: calc(100% - 4rem);
+
+}
+
+.labs-callout{
+    margin-top: 4rem;
+}

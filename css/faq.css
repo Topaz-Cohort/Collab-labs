@@ -1,0 +1,175 @@
+/* =========================================
+   FAQ SECTION
+========================================= */
+
+.faq {
+    background: var(--color-background);
+}
+
+/* =========================================
+   FAQ LIST
+========================================= */
+
+.faq-list {
+    max-width: 850px;
+    margin: var(--space-12) auto 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+/* =========================================
+   FAQ ITEM
+========================================= */
+
+.faq-item {
+    background: #fff;
+
+    border: 1px solid var(--color-border);
+
+    border-radius: var(--radius-xl);
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow-sm);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.faq-item:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+/* =========================================
+   SUMMARY
+========================================= */
+
+.faq-item summary {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    list-style: none;
+
+    cursor: pointer;
+
+    padding: 1.4rem 1.75rem;
+
+    font-size: 1.05rem;
+    font-weight: 600;
+
+    color: var(--color-primary);
+
+    transition: background .25s ease;
+
+}
+
+.faq-item summary:hover {
+    background: rgba(3, 181, 170, .05);
+}
+
+/* Remove default marker */
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::marker {
+    display: none;
+}
+
+/* =========================================
+   CUSTOM PLUS ICON
+========================================= */
+
+.faq-item summary::after {
+
+    content: "+";
+
+    font-size: 1.6rem;
+
+    font-weight: 300;
+
+    color: var(--color-secondary);
+
+    transition: transform .3s ease;
+
+}
+
+/* =========================================
+   OPEN STATE
+========================================= */
+
+.faq-item[open] summary {
+
+    background: rgba(3, 181, 170, .08);
+
+    border-bottom: 1px solid var(--color-border);
+
+}
+
+.faq-item[open] summary::after {
+
+    transform: rotate(45deg);
+
+}
+
+/* =========================================
+   ANSWER
+========================================= */
+
+.faq-item p {
+
+    padding: 1.5rem 1.75rem;
+
+    margin: 0;
+
+    color: var(--color-text-light);
+
+    line-height: 1.8;
+
+}
+
+/* =========================================
+   SUBTLE ACCENT BAR
+========================================= */
+
+.faq-item {
+
+    position: relative;
+
+}
+
+.faq-item::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background: linear-gradient(to bottom,
+            var(--color-secondary),
+            var(--color-accent));
+
+    opacity: 0;
+
+    transition: opacity .3s ease;
+
+}
+
+.faq-item:hover::before,
+.faq-item[open]::before {
+
+    opacity: 1;
+
+}

@@ -1,0 +1,173 @@
+/* =========================================
+   CALL TO ACTION
+========================================= */
+
+.cta {
+    background: var(--color-surface);
+    
+}
+
+/* =========================================
+   CTA CARD
+========================================= */
+
+.cta-card {
+    position: relative;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 4rem 3rem;
+
+    text-align: center;
+
+    background: linear-gradient(135deg,
+            rgba(3, 181, 170, .08),
+            rgba(255, 133, 82, .08));
+
+    border: 1px solid var(--color-border);
+
+    border-radius: var(--radius-2xl);
+
+    box-shadow: var(--shadow-lg);
+
+    overflow: hidden;
+}
+
+/* =========================================
+   TOP ACCENT BAR
+========================================= */
+
+.cta-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 6px;
+
+    background: linear-gradient(90deg,
+            var(--color-secondary),
+            var(--color-accent));
+}
+
+/* =========================================
+   BACKGROUND DECORATION
+========================================= */
+
+.cta-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    top: -140px;
+    right: -140px;
+
+    border-radius: 50%;
+
+    background: rgba(3, 181, 170, .08);
+
+    pointer-events: none;
+}
+
+/* =========================================
+   TAG
+========================================= */
+
+.cta-card .section-tag {
+    margin-bottom: 1rem;
+}
+
+/* =========================================
+   HEADING
+========================================= */
+
+.cta-card h2 {
+    max-width: 650px;
+
+    margin: 0 auto 1.5rem;
+
+    color: var(--color-primary);
+
+    line-height: 1.2;
+}
+
+.cta-card h2 span {
+    color: var(--color-secondary);
+}
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.cta-card p {
+    max-width: 620px;
+
+    margin: 0 auto;
+
+    color: var(--color-text-light);
+
+    line-height: 1.8;
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.cta-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    margin-top: 2.5rem;
+
+    flex-wrap: wrap;
+}
+
+/* =========================================
+   BUTTON IMPROVEMENTS
+========================================= */
+
+.cta-actions .btn {
+    min-width: 200px;
+}
+
+.cta-actions .btn-primary {
+    box-shadow: var(--shadow-md);
+}
+
+.cta-actions .btn-primary:hover {
+    transform: translateY(-3px);
+}
+
+.cta-actions .btn-outline:hover {
+    transform: translateY(-3px);
+}
+
+/* =========================================
+   RESPONSIVE PREPARATION
+========================================= */
+
+@media (max-width: 768px) {
+
+    .cta-card {
+        padding: 3rem 2rem;
+    }
+
+    .cta-actions {
+        flex-direction: column;
+    }
+
+    .cta-actions .btn {
+        width: 100%;
+    }
+
+}

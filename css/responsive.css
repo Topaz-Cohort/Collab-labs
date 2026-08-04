@@ -1,0 +1,278 @@
+/* =========================================
+   RESPONSIVE DESIGN
+   CollabLab v1.0
+========================================= */
+
+/* =========================================
+   LARGE TABLETS
+========================================= */
+
+@media (max-width: 1200px) {
+
+    .hero-grid,
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid,
+    .labs-grid,
+    .developers-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .board-columns {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* =========================================
+   TABLETS
+========================================= */
+
+@media (max-width: 992px) {
+
+    .container {
+        width: min(100% - 2rem, 1200px);
+    }
+
+    /* Navigation */
+
+    .navbar {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .nav-actions {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Hero */
+
+    .hero {
+        padding-top: 7rem;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-actions,
+    .hero-tags {
+        justify-content: center;
+    }
+
+    /* Workflow */
+
+    .workflow-timeline {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .workflow-connector {
+        display: none;
+    }
+
+    /* Footer */
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .section {
+        padding: 5rem 0;
+    }
+
+    .section-header h2 {
+        font-size: clamp(2rem, 6vw, 2.6rem);
+    }
+
+    /* Hero */
+
+    .hero-grid {
+        gap: 3rem;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(2.5rem, 9vw, 4rem);
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+    }
+
+    /* Statistics */
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .repo-summary-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Workflow */
+
+    .workflow-timeline {
+        grid-template-columns: 1fr;
+    }
+
+    /* Labs */
+
+    .labs-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Dashboard */
+
+    .board-columns {
+        grid-template-columns: 1fr;
+    }
+
+    /* Developers */
+
+    .developers-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* CTA */
+
+    .cta-actions {
+        flex-direction: column;
+    }
+
+    .cta-actions .btn {
+        width: 100%;
+    }
+
+    /* Footer */
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer .logo {
+        justify-content: center;
+    }
+
+    .footer-column:first-child p {
+        margin-inline: auto;
+    }
+
+}
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 576px) {
+
+    .container {
+        width: min(100% - 1.5rem, 1200px);
+    }
+
+    .section {
+        padding: 4rem 0;
+    }
+
+    .section-header {
+        margin-bottom: 3rem;
+    }
+
+    .hero {
+        padding-top: 6rem;
+    }
+
+    .hero-tags {
+        gap: .5rem;
+    }
+
+    .hero-tags span {
+        font-size: .8rem;
+    }
+
+    .browser-window {
+        border-radius: 1rem;
+    }
+
+    .repo-summary-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .lab-meta {
+        grid-template-columns: 1fr;
+    }
+
+    .developer-info li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .35rem;
+    }
+
+    .activity-item {
+        flex-direction: column;
+    }
+
+    .column-header {
+        justify-content: center;
+    }
+
+    .faq-item summary {
+        font-size: 1rem;
+        padding: 1.2rem;
+    }
+
+    .faq-item p {
+        padding: 1.2rem;
+    }
+
+}
+
+/* =========================================
+   EXTRA SMALL DEVICES
+========================================= */
+
+@media (max-width: 400px) {
+
+    h1 {
+        font-size: 2.25rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .logo-text small {
+        display: none;
+    }
+
+    .browser-title {
+        display: none;
+    }
+
+}
