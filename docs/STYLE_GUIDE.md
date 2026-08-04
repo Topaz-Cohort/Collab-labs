@@ -28,13 +28,11 @@ Example:
 
 ## Naming Convention
 
-Use kebab-case.
-
 Good:
 
 ```text
-hero-section
-primary-button
+hero__section-card
+primary__button
 dashboard-card
 ```
 
