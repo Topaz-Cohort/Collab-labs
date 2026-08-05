@@ -6,10 +6,10 @@
     <title>Quiz</title>
 </head>
 <body>
-    <div class="quiz-card">
+    <main class="quiz-card">
         <h1>Bible Quiz</h1>
         <form>
-            <div class="question">
+            <section class="question">
                 <p>1. Who was the first man?</p>
                 <div class="options">
                     <label><input type="radio" name="q1" value="a"> Adam</label>
@@ -17,9 +17,9 @@
                     <label><input type="radio" name="q1" value="c"> Moses</label> 
                     <label><input type="radio" name="q1" value="d"> Abraham</label>  
                 </div>
-            </div>
+            </section>
 
-            <div class="question">
+            <section class="question">
                 <p>2. Who built the ark?</p>
                 <div class="options">
                     <label><input type="radio" name="q2" value="a"> Adam</label>
@@ -27,9 +27,9 @@
                     <label><input type="radio" name="q2" value="c"> Moses</label>
                     <label><input type="radio" name="q2" value="d"> Abraham</label>
                 </div>
-            </div>
+            </section>
 
-            <div class="question">
+            <section class="question">
                 <p>3. How many days did it take God to create the world?</p>
                 <div class="options">
                     <label><input type="radio" name="q3" value="a"> 5</label>
@@ -37,9 +37,9 @@
                     <label><input type="radio" name="q3" value="c"> 7</label>
                     <label><input type="radio" name="q3" value="d"> 8</label>
                 </div>
-            </div>
+            </section>
 
-            <div class="question">
+            <section class="question">
                 <p>4. What was the name of the first woman?</p>
                 <div class="options">
                     <label><input type="radio" name="q4" value="a"> Eve</label>
@@ -47,9 +47,9 @@
                     <label><input type="radio" name="q4" value="c"> Rebekah</label>
                     <label><input type="radio" name="q4" value="d"> Rachel</label>
                 </div>
-            </div>
+            </section>
 
-            <div class="question">
+            <section class="question">
                 <p>5. Who was thrown into the lion's den?</p>
                 <div class="options">
                     <label><input type="radio" name="q5" value="a"> Daniel</label>
@@ -57,13 +57,13 @@
                     <label><input type="radio" name="q5" value="c"> Joseph</label>
                     <label><input type="radio" name="q5" value="d"> Elijah</label>
                 </div>
-            </div>
+            </section>
 
             <button type="button" onclick="checkAnswers()">Submit Quiz</button>
         </form>
 
         <div id="result" class="result"></div>
         
-    </div>
+    </main>
 </body>
 </html>
