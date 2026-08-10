@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskManager  Dashboard</title>
+  <script
+      src="https://kit.fontawesome.com/5a92aed906.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="dashboard">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar__logo">
+          <i class="fa-solid fa-list-check"></i>
+          <h4>TaskManager</h4>
+        </div>
+
+        <nav class="sidebar__nav">
+          <ul>
+            <li>
+              <a href="#dashboard" class="sidebar__link active">
+                <i class="fa-solid fa-grip"></i>
+                <span>Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="#tasks" class="sidebar__link">
+                <i class="fa-solid fa-list-check"></i>
+                <span>Tasks</span>
+              </a>
+            </li>
+            <li>
+              <a href="#calendar" class="sidebar__link">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>Calendar</span>
+              </a>
+            </li>
+            <li>
+              <a href="#statistics" class="sidebar__link">
+                <i class="fa-solid fa-chart-simple"></i>
+                <span>Statistics</span>
+              </a>
+            </li>
+            <li>
+              <a href="#labels" class="sidebar__link">
+                <i class="fa-solid fa-tag"></i>
+                <span>Labels</span>
+              </a>
+            </li>
+            <li>
+              <a href="#settings" class="sidebar__link">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="sidebar__promo">
+          <div class="sidebar__promo-icon">
+            <i class="fa-solid fa-clipboard-check"></i>
+          </div>
+          <h5>Stay organized and productive</h5>
+          <p>Create tasks, set priorities and track your progress. Things done!</p>
+          <a href="#upgrade" class="btn btn-primary">Upgrade to Pro</a>
+        </div>
+
+        <a href="#logout" class="sidebar__logout">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <span>Logout</span>
+        </a>
+      </aside>
+
+      <!-- Main content -->
+      <div class="dashboard__main">
+        <!-- Topbar -->
+        <header class="topbar">
+          <form class="topbar__search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="search" placeholder="Search tasks..."  />
+          </form>
+
+          <div class="topbar__actions">
+            <button class="topbar__icon-btn">
+              <i class="fa-regular fa-bell"></i>
+              <span class="topbar__badge">3</span>
+            </button>
+
+            <button class="topbar__icon-btn" >
+              <i class="fa-solid fa-angle-down"></i>
+            </button>
+
+            <div class="topbar__profile">
+              <div class="topbar__pic">UC</div>
+              <div>
+                <p class="topbar__profile-name">Uche</p>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <main class="content container">
+          <!-- Page heading -->
+          <section class="content__heading">
+            <div>
+              <h2>Dashboard</h2>
+              <p>Welcome back, Uche! 👋</p>
+            </div>
+            <a href="#new-task" class="btn btn-primary">
+              <i class="fa-solid fa-plus"></i>
+              New Task
+            </a>
+          </section>
+
+          <!-- Stats -->
+          <section class="stats">
+            <div class="stats__card">
+              <div class="stats__icon stats__icon--total">
+                <i class="fa-solid fa-list-ul"></i>
+              </div>
+              <div>
+                <h3>12</h3>
+                <p>Total Tasks</p>
+                <span>All your tasks</span>
+              </div>
+            </div>
+
+            <div class="stats__card">
+              <div class="stats__icon stats__icon--progress">
+                <i class="fa-regular fa-clock"></i>
+              </div>
+              <div>
+                <h3>5</h3>
+                <p>In Progress</p>
+                <span>Tasks in progress</span>
+              </div>
+            </div>
+
+            <div class="stats__card">
+              <div class="stats__icon stats__icon--pending">
+                <i class="fa-solid fa-hourglass-half"></i>
+              </div>
+              <div>
+                <h3>3</h3>
+                <p>Pending</p>
+                <span>Tasks pending</span>
+              </div>
+            </div>
+
+            <div class="stats__card">
+              <div class="stats__icon stats__icon--completed">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <div>
+                <h3>4</h3>
+                <p>Completed</p>
+                <span>Tasks completed</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- Tasks -->
+          <section class="content__grid">
+            <!-- My Tasks -->
+            <section class="tasks">
+              <div class="tasks__header">
+                <h3>My Tasks</h3>
+
+                <ul class="tasks__filter">
+                  <li><a href="#all" class="active">All</a></li>
+                  <li><a href="#pending">Pending</a></li>
+                  <li><a href="#in-progress">In Progress</a></li>
+                  <li><a href="#completed">Completed</a></li>
+                </ul>
+
+                <a href="#view-all" class="tasks__view-all">View all</a>
+              </div>
+
+              <ul class="tasks__list">
+                <li class="task">
+                  <input type="checkbox" class="task__check" />
+
+                  <div class="task__info">
+                    <p class="task__title">Design the home page UI</p>
+                    <span class="task__tag">UI/UX</span>
+                  </div>
+
+                  <span class="badge badge--high">High</span>
+
+                  <div class="task__due">
+                    <i class="fa-regular fa-calendar"></i>
+                    <span>May 20</span>
+                  </div>
+
+                  <button class="task__more" >
+                    <i class="fa-solid fa-ellipsis"></i>
+                  </button>
+                </li>
+
+                <li class="task">
+                  <input type="checkbox" class="task__check" />
+
+                  <div class="task__info">
+                    <p class="task__title">Implement task filters</p>
+                    <span class="task__tag">Frontend</span>
+                  </div>
+
+                  <span class="badge badge--medium">Medium</span>
+
+                  <div class="task__due">
+                    <i class="fa-regular fa-calendar"></i>
+                    <span>May 22</span>
+                  </div>
+
+                  <button class="task__more">
+                    <i class="fa-solid fa-ellipsis"></i>
+                  </button>
+                </li>
+
+                <li class="task">
+                  <input type="checkbox" class="task__check" checked />
+
+                  <div class="task__info task__info--done">
+                    <p class="task__title">Setup project repository</p>
+                    <span class="task__tag">DevOps</span>
+                  </div>
+
+                  <span class="badge badge--low">Low</span>
+
+                  <div class="task__due">
+                    <i class="fa-regular fa-calendar"></i>
+                    <span>May 18</span>
+                  </div>
+
+                  <button class="task__more" >
+                    <i class="fa-solid fa-ellipsis"></i>
+                  </button>
+                </li>
+
+                <li class="task">
+                  <input type="checkbox" class="task__check" />
+
+                  <div class="task__info">
+                    <p class="task__title">Add task CRUD functionality</p>
+                    <span class="task__tag">Frontend</span>
+                  </div>
+
+                  <span class="badge badge--high">High</span>
+
+                  <div class="task__due">
+                    <i class="fa-regular fa-calendar"></i>
+                    <span>May 25</span>
+                  </div>
+
+                  <button class="task__more" >
+                    <i class="fa-solid fa-ellipsis"></i>
+                  </button>
+                </li>
+
+                <li class="task">
+                  <input type="checkbox" class="task__check" />
+
+                  <div class="task__info">
+                    <p class="task__title">Integrate local storage</p>
+                    <span class="task__tag">Frontend</span>
+                  </div>
+
+                  <span class="badge badge--medium">Medium</span>
+
+                  <div class="task__due">
+                    <i class="fa-regular fa-calendar"></i>
+                    <span>May 30</span>
+                  </div>
+
+                  <button class="task__more" >
+                    <i class="fa-solid fa-ellipsis"></i>
+                  </button>
+                </li>
+
+                <li class="task">
+                  <input type="checkbox" class="task__check" checked />
+
+                  <div class="task__info task__info--done">
+                    <p class="task__title">Create navigation sidebar</p>
+                    <span class="task__tag">UI/UX</span>
+                  </div>
+
+                  <span class="badge badge--low">Low</span>
+
+                  <div class="task__due">
+                    <i class="fa-regular fa-calendar"></i>
+                    <span>May 15</span>
+                  </div>
+
+                  <button class="task__more" >
+                    <i class="fa-solid fa-ellipsis"></i>
+                  </button>
+                </li>
+
+                <li class="task">
+                  <input type="checkbox" class="task__check" />
+
+                  <div class="task__info">
+                    <p class="task__title">Write documentation</p>
+                    <span class="task__tag">Documentation</span>
+                  </div>
+
+                  <span class="badge badge--low">Low</span>
+
+                  <div class="task__due">
+                    <i class="fa-regular fa-calendar"></i>
+                    <span>May 28</span>
+                  </div>
+
+                  <button class="task__more">
+                    <i class="fa-solid fa-ellipsis"></i>
+                  </button>
+                </li>
+
+                <li class="task">
+                  <input type="checkbox" class="task__check" />
+
+                  <div class="task__info">
+                    <p class="task__title">Test on mobile devices</p>
+                    <span class="task__tag">Testing</span>
+                  </div>
+
+                  <span class="badge badge--medium">Medium</span>
+
+                  <div class="task__due">
+                    <i class="fa-regular fa-calendar"></i>
+                    <span>May 20</span>
+                  </div>
+
+                  <button class="task__more">
+                    <i class="fa-solid fa-ellipsis"></i>
+                  </button>
+                </li>
+              </ul>
+
+              <div class="tasks__pages">
+                <p>Showing 1 to 8 of 12 tasks</p>
+
+                <ul class="pages">
+                  <li>
+                    <a href="#">
+                      <i class="fa-solid fa-chevron-left"></i>
+                    </a>
+                  </li>
+                  <li><a href="#page-1" class="active">1</a></li>
+                  <li><a href="#page-2">2</a></li>
+                  <li><a href="#page-3">3</a></li>
+                  <li>
+                    <a href="#" aria-label="Next page">
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </section>
+
+            <!-- Side panel -->
+            <aside class="side-panel">
+              
+              <section class="overview">
+                <h3>Progress Overview</h3>
+
+                <div class="overview__chart">
+                  <div class="overview__chart-label">
+                    <strong>67%</strong>
+                    <span>Completed</span>
+                  </div>
+                </div>
+
+                <ul class="overview__info">
+                  <li>
+                    <span class="dot dot--completed"></span>
+                    Completed <b>4</b>
+                  </li>
+                  <li>
+                    <span class="dot dot--progress"></span>
+                    In Progress <b>5</b>
+                  </li>
+                  <li>
+                    <span class="dot dot--pending"></span>
+                    Pending <b>3</b>
+                  </li>
+                  <li>
+                    <span class="dot dot--total"></span>
+                    Total Tasks <b>12</b>
+                  </li>
+                </ul>
+              </section>
+
+              <!-- Upcoming Tasks -->
+              <section class="upcoming">
+                <div class="upcoming__header">
+                  <h3>Upcoming Tasks</h3>
+                  <a href="#view-all">View all</a>
+                </div>
+
+                <ul class="upcoming__list">
+                  <li class="upcoming__item">
+                    <div>
+                      <p>Design the home page UI</p>
+                      <span>May 20, 2026</span>
+                    </div>
+                    <span class="badge badge--high">High</span>
+                  </li>
+
+                  <li class="upcoming__item">
+                    <div>
+                      <p>Implement task filters</p>
+                      <span>May 22, 2026</span>
+                    </div>
+                    <span class="badge badge--medium">Medium</span>
+                  </li>
+
+                  <li class="upcoming__item">
+                    <div>
+                      <p>Add task CRUD functionality</p>
+                      <span>May 25, 2026</span>
+                    </div>
+                    <span class="badge badge--high">High</span>
+                  </li>
+
+                  <li class="upcoming__item">
+                    <div>
+                      <p>Integrate local storage</p>
+                      <span>May 30, 2026</span>
+                    </div>
+                    <span class="badge badge--medium">Medium</span>
+                  </li>
+                </ul>
+              </section>
+
+              <!-- Quick Actions -->
+              <section class="quick-actions">
+                <h3>Quick Actions</h3>
+
+                <ul class="quick-actions__grid">
+                  <li>
+                    <a href="#new-task" class="quick-actions__item">
+                      <span class="quick-actions__icon quick-actions__icon--task">
+                        <i class="fa-solid fa-plus"></i>
+                      </span>
+                      <p>New Task</p>
+                      <span>Create a new task</span>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#add-label" class="quick-actions__item">
+                      <span class="quick-actions__icon quick-actions__icon--label">
+                        <i class="fa-solid fa-tag"></i>
+                      </span>
+                      <p>Add Label</p>
+                      <span>Organize with labels</span>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#" class="quick-actions__item">
+                      <span class="quick-actions__icon quick-actions__icon--calendar">
+                        <i class="fa-solid fa-calendar-days"></i>
+                      </span>
+                      <p>View Calendar</p>
+                      <span>See your schedule</span>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#statistics" class="quick-actions__item">
+                      <span class="quick-actions__icon quick-actions__icon--stats">
+                        <i class="fa-solid fa-chart-simple"></i>
+                      </span>
+                      <p>View Statistics</p>
+                      <span>Track your progress</span>
+                    </a>
+                  </li>
+                </ul>
+              </section>
+            </aside>
+          </section>
+        </main>
+
+        <footer class="dashboard__footer">
+          <p>&copy; 2026 TaskManager. All rights reserved.</p>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
