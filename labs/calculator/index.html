@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Calculator</title>
+</head>
+
+<body>
+  
+  <div class="calculator-box">
+    
+    <input type="text" id="result-screen" class="screen" value="0" readonly>
+
+    <table>
+      <tr>
+        <td><button class="calc-btn clear-btn" onclick="clearScreen()">C</button></td>
+        <td><button class="calc-btn operator-btn" onclick="pressOperator('/')">/</button></td>
+        <td><button class="calc-btn operator-btn" onclick="pressOperator('*')">*</button></td>
+        <td><button class="calc-btn operator-btn" onclick="pressOperator('-')">-</button></td>
+      </tr>
+      <tr>
+        <td><button class="calc-btn" onclick="pressNumber('7')">7</button></td>
+        <td><button class="calc-btn" onclick="pressNumber('8')">8</button></td>
+        <td><button class="calc-btn" onclick="pressNumber('9')">9</button></td>
+         <td rowspan="2"><button class="calc-btn operator-btn" style="height: 120px;" onclick="pressOperator('+')">+</button></td>
+      </tr>
+      <tr>
+        <td><button class="calc-btn" onclick="pressNumber('4')">4</button></td>
+        <td><button class="calc-btn" onclick="pressNumber('5')">5</button></td>
+        <td><button class="calc-btn" onclick="pressNumber('6')">6</button></td>
+      </tr>
+      <tr>
+        <td><button class="calc-btn" onclick="pressNumber('1')">1</button></td>
+        <td><button class="calc-btn" onclick="pressNumber('2')">2</button></td>
+        <td><button class="calc-btn" onclick="pressNumber('3')">3</button></td>
+        <td rowspan="2"><button class="calc-btn equal-btn" style="height: 120px;" onclick="runCalculation()">=</button></td>
+      </tr>
+      <tr>
+        <td colspan="2"><button class="calc-btn" onclick="pressNumber('0')">0</button></td>
+        <td><button class="calc-btn" onclick="pressDecimal()">.</button></td>
+      </tr>
+    </table>
+    </div>
+    
+    
+    
+     
+</body>
+
+</html>   
